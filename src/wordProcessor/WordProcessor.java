@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package word_processor_java;
+package wordProcessor;
 
 /**
  *
  * @author spatel7043
  */
-public class Word_Processor_Java {
+public class WordProcessor {
 
     /**
      * @param args the command line arguments
