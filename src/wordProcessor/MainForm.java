@@ -89,49 +89,27 @@ public class MainForm extends javax.swing.JFrame {
         cutAction.putValue(Action.NAME, "Cut");
         cutOption.setAction(cutAction); //setting cut action to the cut menu item
 
-        Action changeFontToTimesAction = new StyledEditorKit.FontFamilyAction("Times New Roman",
-                "Times New Roman");
-        changeFontToTimesAction.putValue(Action.NAME, "Times New Roman");
-        changeFontTimes.setAction(changeFontToTimesAction); //setting font change to Times New Roman action to corresponding menu item 
+        createFontTypeHandler(changeFontTimes);
 
-        Action changeFontToArialAction = new StyledEditorKit.FontFamilyAction("Arial", "Arial");
-        changeFontToArialAction.putValue(Action.NAME, "Arial");
-        changeFontArial.setAction(changeFontToArialAction); //setting font change to Arial action to corresponding menu item 
+        createFontTypeHandler(changeFontArial);
 
-        Action changeFontToBradleyAction = new StyledEditorKit.FontFamilyAction("Bradley Hand ITC",
-                "Bradley Hand ITC");
-        changeFontToBradleyAction.putValue(Action.NAME, "Bradley Hand ITC");
-        changeFontBradley.setAction(changeFontToBradleyAction); //setting font change to Bradley Hand ITC action to corresponding menu item 
+        createFontTypeHandler(changeFontBradley);
 
-        Action changeFontToCalibriAction = new StyledEditorKit.FontFamilyAction("Calibri", "Calibri");
-        changeFontToCalibriAction.putValue(Action.NAME, "Calibri");
-        changeFontCalibri.setAction(changeFontToCalibriAction); //setting font change to Calibri action to corresponding menu item 
+        createFontTypeHandler(changeFontCalibri);
 
-        Action changeFontToChillerAction = new StyledEditorKit.FontFamilyAction("Chiller", "Chiller");
-        changeFontToChillerAction.putValue(Action.NAME, "Chiller");
-        changeFontChiller.setAction(changeFontToChillerAction); //setting font change to Chiller action to corresponding menu item 
+        createFontTypeHandler(changeFontChiller);
 
-        Action changeFontToComicSansAction = new StyledEditorKit.FontFamilyAction("Comic Sans MS",
-                "Comic Sans MS");
-        changeFontToComicSansAction.putValue(Action.NAME, "Comic Sans");
-        changeFontComicSans.setAction(changeFontToComicSansAction); //setting font change to Comic Sans MS action to corresponding menu item 
+        createFontTypeHandler(changeFontComicSans);
 
-        Action changeFontToCourierNewAction = new StyledEditorKit.FontFamilyAction("Courier New",
-                "Courier New");
-        changeFontToCourierNewAction.putValue(Action.NAME, "Courier New");
-        changeFontCourierNew.setAction(changeFontToCourierNewAction); //setting font change to Courier New action to corresponding menu item 
+        createFontTypeHandler(changeFontCourierNew);
 
-        Action changeFontToOldEnglishTextAction = new StyledEditorKit.FontFamilyAction("Old English Text MT",
-                "Old English Text MT");
-        changeFontToOldEnglishTextAction.putValue(Action.NAME, "Old English Text");
-        changeFontOldEnglishText.setAction(changeFontToOldEnglishTextAction); //setting font change to Old English Text MT action to 
-        //corresponding menu item 
+        createFontTypeHandler(changeFontOldEnglishText);
 
-        Action changeFontToPalaceScriptAction = new StyledEditorKit.FontFamilyAction("Palace Script MT",
-                "Palace Script MT");
-        changeFontToPalaceScriptAction.putValue(Action.NAME, "Palace Script MT");
-        changeFontPalaceScript.setAction(changeFontToPalaceScriptAction); //setting font change to Palace Script MT action to 
-        //corresponding menu item 
+        createFontTypeHandler(changeFontPalaceScript);
+
+        createFontTypeHandler(changeFontRavie);
+
+        createFontTypeHandler(changeFontVerdana);
 
         Action changeFontToRavieAction = new StyledEditorKit.FontFamilyAction("Ravie", "Ravie");
         changeFontToRavieAction.putValue(Action.NAME, "Ravie");
@@ -374,23 +352,11 @@ public class MainForm extends javax.swing.JFrame {
 
         formatMenu.setText("Format");
 
-        bold.setText("Bold Text");
-        bold.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bold.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boldActionPerformed(evt);
-            }
-        });
-        formatMenu.add(bold);
+        addMenuItemToMenu(bold, "Bold Text", formatMenu);
 
-        italicize.setText("Italicize Text");
-        italicize.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-//        italicize.addActionListener(new java.awt.event.ActionListener() {
-//            public void actionPerformed(java.awt.event.ActionEvent evt) {
-//                italicizeActionPerformed(evt);
-//            }
-//        });
-        formatMenu.add(italicize);
+        addMenuItemToMenu(italicize, "Italicize Text", formatMenu);
+
+        addMenuItemToMenu(underline, "Underline Text", formatMenu);
 
         fontChangeColour.setText("Change Font Colour");
         fontChangeColour.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -400,15 +366,6 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         formatMenu.add(fontChangeColour);
-
-        underline.setText("Underline Text");
-        underline.setToolTipText("");
-        underline.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                underlineActionPerformed(evt);
-            }
-        });
-        formatMenu.add(underline);
 
         topMenuBar.add(formatMenu);
 
@@ -506,14 +463,6 @@ public class MainForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_openFileActionPerformed
 
-    private void copyOptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_copyOptionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_copyOptionActionPerformed
-
-    private void italicizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_italicizeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_italicizeActionPerformed
-
     private void fontChangeColourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fontChangeColourActionPerformed
         // TODO add your handling code here:
         selectedColor = JColorChooser.showDialog(this, "Pick a font color", selectedColor); //show JColorChooser and save colour user 
@@ -525,45 +474,9 @@ public class MainForm extends javax.swing.JFrame {
         changeFontColorAction.actionPerformed(evt); //set this action to be performed when user clicks the font colour change menu item
     }//GEN-LAST:event_fontChangeColourActionPerformed
 
-    private void boldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boldActionPerformed
-
     private void underlineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_underlineActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_underlineActionPerformed
-
-    private void pasteOptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasteOptionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pasteOptionActionPerformed
-
-    private void cutOptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cutOptionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cutOptionActionPerformed
-
-    private void changeFontComicSansActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontComicSansActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_changeFontComicSansActionPerformed
-
-    private void changeFontCalibriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontCalibriActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_changeFontCalibriActionPerformed
-
-    private void changeFontPalaceScriptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontPalaceScriptActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_changeFontPalaceScriptActionPerformed
-
-    private void changeFontOldEnglishTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontOldEnglishTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_changeFontOldEnglishTextActionPerformed
-
-    private void changeFontTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontTimesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_changeFontTimesActionPerformed
-
-    private void changeFontBradleyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontBradleyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_changeFontBradleyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -664,5 +577,12 @@ public class MainForm extends javax.swing.JFrame {
         menuItem.setFont(new java.awt.Font(ItemText, 0, 11)); // NOI18N
         menuItem.setText("Times New Roman");
         menu.add(menuItem);
+    }
+
+    private void createFontTypeHandler(javax.swing.JMenuItem menuItem){
+        String font = menuItem.getFont().getName();
+        Action fontAction = new StyledEditorKit.FontFamilyAction(font, font);
+        fontAction.putValue(Action.NAME, font);
+        menuItem.setAction(fontAction);
     }
 }
