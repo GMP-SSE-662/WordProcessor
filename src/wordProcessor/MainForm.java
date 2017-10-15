@@ -304,92 +304,71 @@ public class MainForm extends javax.swing.JFrame {
 
         fontChangeMenu.setText("Change Font");
 
-        AddFontTypeToMenu(changeFontArial, "Arial", fontChangeMenu);
+        addFontTypeToMenu(changeFontArial, "Arial", fontChangeMenu);
 
-        AddFontTypeToMenu(changeFontBradley, "Bradley Hand ITC", fontChangeMenu);
+        addFontTypeToMenu(changeFontBradley, "Bradley Hand ITC", fontChangeMenu);
 
-        AddFontTypeToMenu(changeFontCalibri, "Calibri", fontChangeMenu);
+        addFontTypeToMenu(changeFontCalibri, "Calibri", fontChangeMenu);
 
-        AddFontTypeToMenu(changeFontChiller, "Chiller", fontChangeMenu);
+        addFontTypeToMenu(changeFontChiller, "Chiller", fontChangeMenu);
 
-        AddFontTypeToMenu(changeFontComicSans, "Comic Sans MS", fontChangeMenu);
+        addFontTypeToMenu(changeFontComicSans, "Comic Sans MS", fontChangeMenu);
 
-        AddFontTypeToMenu(changeFontCourierNew, "Courier New", fontChangeMenu);
+        addFontTypeToMenu(changeFontCourierNew, "Courier New", fontChangeMenu);
 
-        AddFontTypeToMenu(changeFontOldEnglishText, "Old English Text MT", fontChangeMenu);
+        addFontTypeToMenu(changeFontOldEnglishText, "Old English Text MT", fontChangeMenu);
 
-        AddFontTypeToMenu(changeFontPalaceScript, "Palace Script MT", fontChangeMenu);
+        addFontTypeToMenu(changeFontPalaceScript, "Palace Script MT", fontChangeMenu);
 
-        AddFontTypeToMenu(changeFontRavie, "Ravie", fontChangeMenu);
+        addFontTypeToMenu(changeFontRavie, "Ravie", fontChangeMenu);
 
-        AddFontTypeToMenu(changeFontTimes, "Times New Roman", fontChangeMenu);
+        addFontTypeToMenu(changeFontTimes, "Times New Roman", fontChangeMenu);
 
-        AddFontTypeToMenu(changeFontVerdana, "Verdana", fontChangeMenu);
+        addFontTypeToMenu(changeFontVerdana, "Verdana", fontChangeMenu);
 
         editMenu.add(fontChangeMenu);
 
         changeFontSizeMenu.setText("Change Font Size");
 
-        AddFontSizeToMenu(changeFontSize8, "8", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize8, "8", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize9, "9", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize9, "9", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize10, "10", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize10, "10", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize11, "11", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize11, "11", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize12, "12", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize12, "12", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize14, "14", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize14, "14", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize16, "16", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize16, "16", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize18, "18", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize18, "18", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize20, "20", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize20, "20", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize22, "22", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize22, "22", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize24, "24", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize24, "24", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize26, "26", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize26, "26", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize28, "28", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize28, "28", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize36, "36", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize36, "36", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize48, "48", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize48, "48", changeFontSizeMenu);
 
-        AddFontSizeToMenu(changeFontSize72, "72", changeFontSizeMenu);
+        addMenuItemToMenu(changeFontSize72, "72", changeFontSizeMenu);
 
         editMenu.add(changeFontSizeMenu);
 
-        cutOption.setText("Cut");
-        cutOption.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cutOption.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cutOptionActionPerformed(evt);
-            }
-        });
-        editMenu.add(cutOption);
+        addMenuItemToMenu(cutOption, "Cut", editMenu);
 
-        copyOption.setText("Copy");
-        copyOption.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        copyOption.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                copyOptionActionPerformed(evt);
-            }
-        });
-        editMenu.add(copyOption);
+        addMenuItemToMenu(copyOption, "Copy", editMenu);
 
-        pasteOption.setText("Paste");
-        pasteOption.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pasteOption.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pasteOptionActionPerformed(evt);
-            }
-        });
-        editMenu.add(pasteOption);
+        addMenuItemToMenu(pasteOption, "Paste", editMenu);
 
         topMenuBar.add(editMenu);
 
@@ -670,7 +649,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem underline;
     // End of variables declaration//GEN-END:variables
 
-    private void AddFontSizeToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu) {
+    private void addMenuItemToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu) {
         menuItem.setText(ItemText);
         menuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -681,7 +660,7 @@ public class MainForm extends javax.swing.JFrame {
         menu.add(menuItem);
     }
 
-    private void AddFontTypeToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu){
+    private void addFontTypeToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu){
         menuItem.setFont(new java.awt.Font(ItemText, 0, 11)); // NOI18N
         menuItem.setText("Times New Roman");
         menu.add(menuItem);
