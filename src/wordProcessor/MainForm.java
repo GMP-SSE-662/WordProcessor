@@ -382,134 +382,37 @@ public class MainForm extends javax.swing.JFrame {
 
         changeFontSizeMenu.setText("Change Font Size");
 
-        changeFontSize8.setText("8");
-        changeFontSize8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize8ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize8);
+        AddItemToMenu(changeFontSize8, "8", changeFontSizeMenu);
 
-        changeFontSize9.setText("9");
-        changeFontSize9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize9ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize9);
+        AddItemToMenu(changeFontSize9, "9", changeFontSizeMenu);
 
-        changeFontSize10.setText("10");
-        changeFontSize10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize10ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize10);
+        AddItemToMenu(changeFontSize10, "10", changeFontSizeMenu);
 
-        changeFontSize11.setText("11");
-        changeFontSize11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize11ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize11);
+        AddItemToMenu(changeFontSize11, "11", changeFontSizeMenu);
 
-        changeFontSize12.setSelected(true);
-        changeFontSize12.setText("12");
-        changeFontSize12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize12ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize12);
+        AddItemToMenu(changeFontSize12, "12", changeFontSizeMenu);
 
-        changeFontSize14.setText("14");
-        changeFontSize14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize14ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize14);
+        AddItemToMenu(changeFontSize14, "14", changeFontSizeMenu);
 
-        changeFontSize16.setText("16");
-        changeFontSize16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize16ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize16);
+        AddItemToMenu(changeFontSize16, "16", changeFontSizeMenu);
 
-        changeFontSize18.setText("18");
-        changeFontSize18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize18ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize18);
+        AddItemToMenu(changeFontSize18, "18", changeFontSizeMenu);
 
-        changeFontSize20.setText("20");
-        changeFontSize20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize20ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize20);
+        AddItemToMenu(changeFontSize20, "20", changeFontSizeMenu);
 
-        changeFontSize22.setText("22");
-        changeFontSize22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize22ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize22);
+        AddItemToMenu(changeFontSize22, "22", changeFontSizeMenu);
 
-        changeFontSize24.setText("24");
-        changeFontSize24.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize24ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize24);
+        AddItemToMenu(changeFontSize24, "24", changeFontSizeMenu);
 
-        changeFontSize26.setText("26");
-        changeFontSize26.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize26ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize26);
+        AddItemToMenu(changeFontSize26, "26", changeFontSizeMenu);
 
-        changeFontSize28.setText("28");
-        changeFontSize28.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize28ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize28);
+        AddItemToMenu(changeFontSize28, "28", changeFontSizeMenu);
 
-        changeFontSize36.setText("36");
-        changeFontSize36.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize36ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize36);
+        AddItemToMenu(changeFontSize36, "36", changeFontSizeMenu);
 
-        changeFontSize48.setText("48");
-        changeFontSize48.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize48ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize48);
+        AddItemToMenu(changeFontSize48, "48", changeFontSizeMenu);
 
-        changeFontSize72.setText("72");
-        changeFontSize72.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontSize72ActionPerformed(evt);
-            }
-        });
-        changeFontSizeMenu.add(changeFontSize72);
+        AddItemToMenu(changeFontSize72, "72", changeFontSizeMenu);
 
         editMenu.add(changeFontSizeMenu);
 
@@ -555,11 +458,11 @@ public class MainForm extends javax.swing.JFrame {
 
         italicize.setText("Italicize Text");
         italicize.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        italicize.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                italicizeActionPerformed(evt);
-            }
-        });
+//        italicize.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                italicizeActionPerformed(evt);
+//            }
+//        });
         formatMenu.add(italicize);
 
         fontChangeColour.setText("Change Font Colour");
@@ -735,102 +638,6 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_changeFontBradleyActionPerformed
 
-    private void changeFontSize8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize8ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize8.setSelected(true); //set check box for font size 8 to checked
-    }//GEN-LAST:event_changeFontSize8ActionPerformed
-
-    private void changeFontSize9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize9ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize9.setSelected(true); //set check box for font size 9 to checked
-    }//GEN-LAST:event_changeFontSize9ActionPerformed
-
-    private void changeFontSize10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize10ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize10.setSelected(true); //set check box for font size 10 to checked
-    }//GEN-LAST:event_changeFontSize10ActionPerformed
-
-    private void changeFontSize11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize11ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize11.setSelected(true); //set check box for font size 11 to checked
-    }//GEN-LAST:event_changeFontSize11ActionPerformed
-
-    private void changeFontSize12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize12ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize12.setSelected(true); //set check box for font size 12 to checked
-    }//GEN-LAST:event_changeFontSize12ActionPerformed
-
-    private void changeFontSize14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize14ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize14.setSelected(true); //set check box for font size 14 to checked
-    }//GEN-LAST:event_changeFontSize14ActionPerformed
-
-    private void changeFontSize16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize16ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize16.setSelected(true); //set check box for font size 16 to checked
-    }//GEN-LAST:event_changeFontSize16ActionPerformed
-
-    private void changeFontSize36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize36ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize36.setSelected(true); //set check box for font size 36 to checked
-    }//GEN-LAST:event_changeFontSize36ActionPerformed
-
-    private void changeFontSize48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize48ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize48.setSelected(true); //set check box for font size 48 to checked
-    }//GEN-LAST:event_changeFontSize48ActionPerformed
-
-    private void changeFontSize72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize72ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize72.setSelected(true); //set check box for font size 72 to checked
-    }//GEN-LAST:event_changeFontSize72ActionPerformed
-
-    private void changeFontSize18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize18ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize18.setSelected(true); //set check box for font size 18 to checked
-    }//GEN-LAST:event_changeFontSize18ActionPerformed
-
-    private void changeFontSize20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize20ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize20.setSelected(true); //set check box for font size 20 to checked
-    }//GEN-LAST:event_changeFontSize20ActionPerformed
-
-    private void changeFontSize22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize22ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize22.setSelected(true); //set check box for font size 22 to checked
-    }//GEN-LAST:event_changeFontSize22ActionPerformed
-
-    private void changeFontSize24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize24ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize24.setSelected(true); //set check box for font size 24 to checked
-    }//GEN-LAST:event_changeFontSize24ActionPerformed
-
-    private void changeFontSize26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize26ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize26.setSelected(true); //set check box for font size 26 to checked
-    }//GEN-LAST:event_changeFontSize26ActionPerformed
-
-    private void changeFontSize28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeFontSize28ActionPerformed
-        // TODO add your handling code here:
-        uncheckAll(); //call function to uncheck all checkboxes
-        changeFontSize28.setSelected(true); //set check box for font size 28 to checked
-    }//GEN-LAST:event_changeFontSize28ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -915,4 +722,14 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem underline;
     // End of variables declaration//GEN-END:variables
 
+private void AddItemToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu) {
+    menuItem.setText(ItemText);
+    menuItem.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            if (menuItem instanceof javax.swing.JCheckBoxMenuItem) uncheckAll();
+            if (menuItem instanceof javax.swing.JCheckBoxMenuItem) menuItem.setSelected(true);
+        }
+    });
+    menu.add(menuItem);
+    }
 }

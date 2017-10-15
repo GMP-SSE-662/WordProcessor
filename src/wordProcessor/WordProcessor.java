@@ -19,5 +19,4 @@ public class WordProcessor {
         MainForm myMainForm = new MainForm();
         myMainForm.setVisible(true); //set the MainForm to be visible when program is run
     }
-
 }
