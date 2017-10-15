@@ -304,115 +304,63 @@ public class MainForm extends javax.swing.JFrame {
 
         fontChangeMenu.setText("Change Font");
 
-        changeFontArial.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        changeFontArial.setText("Arial");
-        fontChangeMenu.add(changeFontArial);
+        AddFontTypeToMenu(changeFontArial, "Arial", fontChangeMenu);
 
-        changeFontBradley.setFont(new java.awt.Font("Bradley Hand ITC", 0, 11)); // NOI18N
-        changeFontBradley.setText("Bradley Hand ITC");
-        changeFontBradley.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontBradleyActionPerformed(evt);
-            }
-        });
-        fontChangeMenu.add(changeFontBradley);
+        AddFontTypeToMenu(changeFontBradley, "Bradley Hand ITC", fontChangeMenu);
 
-        changeFontCalibri.setFont(new java.awt.Font("Calibri", 0, 11)); // NOI18N
-        changeFontCalibri.setText("Calibri");
-        changeFontCalibri.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontCalibriActionPerformed(evt);
-            }
-        });
-        fontChangeMenu.add(changeFontCalibri);
+        AddFontTypeToMenu(changeFontCalibri, "Calibri", fontChangeMenu);
 
-        changeFontChiller.setFont(new java.awt.Font("Chiller", 0, 11)); // NOI18N
-        changeFontChiller.setText("Chiller");
-        fontChangeMenu.add(changeFontChiller);
+        AddFontTypeToMenu(changeFontChiller, "Chiller", fontChangeMenu);
 
-        changeFontComicSans.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
-        changeFontComicSans.setText("Comic Sans");
-        changeFontComicSans.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontComicSansActionPerformed(evt);
-            }
-        });
-        fontChangeMenu.add(changeFontComicSans);
+        AddFontTypeToMenu(changeFontComicSans, "Comic Sans MS", fontChangeMenu);
 
-        changeFontCourierNew.setFont(new java.awt.Font("Courier New", 0, 11)); // NOI18N
-        changeFontCourierNew.setText("Courier New");
-        fontChangeMenu.add(changeFontCourierNew);
+        AddFontTypeToMenu(changeFontCourierNew, "Courier New", fontChangeMenu);
 
-        changeFontOldEnglishText.setFont(new java.awt.Font("Old English Text MT", 0, 11)); // NOI18N
-        changeFontOldEnglishText.setText("Old English Text");
-        changeFontOldEnglishText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontOldEnglishTextActionPerformed(evt);
-            }
-        });
-        fontChangeMenu.add(changeFontOldEnglishText);
+        AddFontTypeToMenu(changeFontOldEnglishText, "Old English Text MT", fontChangeMenu);
 
-        changeFontPalaceScript.setFont(new java.awt.Font("Palace Script MT", 0, 11)); // NOI18N
-        changeFontPalaceScript.setText("Palace Script MT");
-        changeFontPalaceScript.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontPalaceScriptActionPerformed(evt);
-            }
-        });
-        fontChangeMenu.add(changeFontPalaceScript);
+        AddFontTypeToMenu(changeFontPalaceScript, "Palace Script MT", fontChangeMenu);
 
-        changeFontRavie.setFont(new java.awt.Font("Ravie", 0, 11)); // NOI18N
-        changeFontRavie.setText("Ravie ");
-        fontChangeMenu.add(changeFontRavie);
+        AddFontTypeToMenu(changeFontRavie, "Ravie", fontChangeMenu);
 
-        changeFontTimes.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
-        changeFontTimes.setText("Times New Roman");
-        changeFontTimes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeFontTimesActionPerformed(evt);
-            }
-        });
-        fontChangeMenu.add(changeFontTimes);
+        AddFontTypeToMenu(changeFontTimes, "Times New Roman", fontChangeMenu);
 
-        changeFontVerdana.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
-        changeFontVerdana.setText("Verdana");
-        fontChangeMenu.add(changeFontVerdana);
+        AddFontTypeToMenu(changeFontVerdana, "Verdana", fontChangeMenu);
 
         editMenu.add(fontChangeMenu);
 
         changeFontSizeMenu.setText("Change Font Size");
 
-        AddItemToMenu(changeFontSize8, "8", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize8, "8", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize9, "9", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize9, "9", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize10, "10", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize10, "10", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize11, "11", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize11, "11", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize12, "12", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize12, "12", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize14, "14", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize14, "14", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize16, "16", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize16, "16", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize18, "18", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize18, "18", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize20, "20", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize20, "20", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize22, "22", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize22, "22", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize24, "24", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize24, "24", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize26, "26", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize26, "26", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize28, "28", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize28, "28", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize36, "36", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize36, "36", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize48, "48", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize48, "48", changeFontSizeMenu);
 
-        AddItemToMenu(changeFontSize72, "72", changeFontSizeMenu);
+        AddFontSizeToMenu(changeFontSize72, "72", changeFontSizeMenu);
 
         editMenu.add(changeFontSizeMenu);
 
@@ -722,14 +670,20 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem underline;
     // End of variables declaration//GEN-END:variables
 
-private void AddItemToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu) {
-    menuItem.setText(ItemText);
-    menuItem.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            if (menuItem instanceof javax.swing.JCheckBoxMenuItem) uncheckAll();
-            if (menuItem instanceof javax.swing.JCheckBoxMenuItem) menuItem.setSelected(true);
-        }
-    });
-    menu.add(menuItem);
+    private void AddFontSizeToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu) {
+        menuItem.setText(ItemText);
+        menuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                if (menuItem instanceof javax.swing.JCheckBoxMenuItem) uncheckAll();
+                if (menuItem instanceof javax.swing.JCheckBoxMenuItem) menuItem.setSelected(true);
+            }
+        });
+        menu.add(menuItem);
+    }
+
+    private void AddFontTypeToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu){
+        menuItem.setFont(new java.awt.Font(ItemText, 0, 11)); // NOI18N
+        menuItem.setText("Times New Roman");
+        menu.add(menuItem);
     }
 }
