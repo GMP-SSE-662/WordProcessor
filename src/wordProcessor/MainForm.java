@@ -56,18 +56,6 @@ public class MainForm extends javax.swing.JFrame {
         Action italicizeAction = new StyledEditorKit.ItalicAction();
         italicizeAction.putValue(Action.NAME, "Italicize Text");
         italicize.setAction(italicizeAction); //setting italic action to the italicize menu item 
-
-        Action copyAction = new StyledEditorKit.CopyAction();
-        copyAction.putValue(Action.NAME, "Copy");
-        copyOption.setAction(copyAction); //setting copy action to the copy menu item
-
-        Action pasteAction = new StyledEditorKit.PasteAction();
-        pasteAction.putValue(Action.NAME, "Paste");
-        pasteOption.setAction(pasteAction); //setting paste action to the paste menu item
-
-        Action cutAction = new StyledEditorKit.CutAction();
-        cutAction.putValue(Action.NAME, "Cut");
-        cutOption.setAction(cutAction); //setting cut action to the cut menu item
     }
 
     /**
@@ -86,12 +74,9 @@ public class MainForm extends javax.swing.JFrame {
         fileMenu = new javax.swing.JMenu();
         saveFile = new javax.swing.JMenuItem();
         openFile = new javax.swing.JMenuItem();
-        editMenu = new javax.swing.JMenu();
+        editMenu = new EditMenu().getMenu();
         fontChangeMenu = new FontTypeMenu().getMenu();
         changeFontSizeMenu = new FontSizeMenu().getMenu();
-        cutOption = new javax.swing.JMenuItem();
-        copyOption = new javax.swing.JMenuItem();
-        pasteOption = new javax.swing.JMenuItem();
         formatMenu = new javax.swing.JMenu();
         bold = new javax.swing.JMenuItem();
         italicize = new javax.swing.JMenuItem();
@@ -137,17 +122,9 @@ public class MainForm extends javax.swing.JFrame {
 
         topMenuBar.add(fileMenu);
 
-        editMenu.setText("Edit");
-
         editMenu.add(fontChangeMenu);
 
         editMenu.add(changeFontSizeMenu);
-
-        addMenuItemToMenu(cutOption, "Cut", editMenu);
-
-        addMenuItemToMenu(copyOption, "Copy", editMenu);
-
-        addMenuItemToMenu(pasteOption, "Paste", editMenu);
 
         topMenuBar.add(editMenu);
 
@@ -318,8 +295,6 @@ public class MainForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane TheTextArea;
     private javax.swing.JMenuItem bold;
-    private javax.swing.JMenuItem copyOption;
-    private javax.swing.JMenuItem cutOption;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenuItem fontChangeColour;
@@ -329,7 +304,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem italicize;
     private javax.swing.JMenuItem openFile;
     private javax.swing.JPanel panelForPage;
-    private javax.swing.JMenuItem pasteOption;
     private javax.swing.JMenuItem saveFile;
     private javax.swing.JTextPane textArea;
     private javax.swing.JMenuBar topMenuBar;
@@ -343,18 +317,5 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         menu.add(menuItem);
-    }
-
-    private void addFontTypeToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu){
-        menuItem.setFont(new java.awt.Font(ItemText, 0, 11)); // NOI18N
-        menuItem.setText(ItemText);
-        menu.add(menuItem);
-    }
-
-    private void createFontTypeHandler(javax.swing.JMenuItem menuItem){
-        String font = menuItem.getFont().getName();
-        Action fontAction = new StyledEditorKit.FontFamilyAction(font, font);
-        fontAction.putValue(Action.NAME, font);
-        menuItem.setAction(fontAction);
     }
 }
