@@ -36,26 +36,6 @@ public class MainForm extends javax.swing.JFrame {
      */
     JFileChooser fileDialog;
     File editFile;
-
-    void uncheckAll() { //function unchecking all the font size check box
-        changeFontSize8.setSelected(false);
-        changeFontSize9.setSelected(false);
-        changeFontSize10.setSelected(false);
-        changeFontSize11.setSelected(false);
-        changeFontSize12.setSelected(false);
-        changeFontSize14.setSelected(false);
-        changeFontSize16.setSelected(false);
-        changeFontSize18.setSelected(false);
-        changeFontSize20.setSelected(false);
-        changeFontSize22.setSelected(false);
-        changeFontSize24.setSelected(false);
-        changeFontSize26.setSelected(false);
-        changeFontSize28.setSelected(false);
-        changeFontSize36.setSelected(false);
-        changeFontSize48.setSelected(false);
-        changeFontSize72.setSelected(false);
-    }
-
     Color selectedColor;
     Action changeFontColorAction;
 
@@ -88,100 +68,6 @@ public class MainForm extends javax.swing.JFrame {
         Action cutAction = new StyledEditorKit.CutAction();
         cutAction.putValue(Action.NAME, "Cut");
         cutOption.setAction(cutAction); //setting cut action to the cut menu item
-
-        createFontTypeHandler(changeFontTimes);
-
-        createFontTypeHandler(changeFontArial);
-
-        createFontTypeHandler(changeFontBradley);
-
-        createFontTypeHandler(changeFontCalibri);
-
-        createFontTypeHandler(changeFontChiller);
-
-        createFontTypeHandler(changeFontComicSans);
-
-        createFontTypeHandler(changeFontCourierNew);
-
-        createFontTypeHandler(changeFontOldEnglishText);
-
-        createFontTypeHandler(changeFontPalaceScript);
-
-        createFontTypeHandler(changeFontRavie);
-
-        createFontTypeHandler(changeFontVerdana);
-
-        Action changeFontToRavieAction = new StyledEditorKit.FontFamilyAction("Ravie", "Ravie");
-        changeFontToRavieAction.putValue(Action.NAME, "Ravie");
-        changeFontRavie.setAction(changeFontToRavieAction); //setting font change to Ravie action to corresponding menu item 
-
-        Action changeFontToVerdanaAction = new StyledEditorKit.FontFamilyAction("Verdana", "Verdana");
-        changeFontToVerdanaAction.putValue(Action.NAME, "Verdana");
-        changeFontVerdana.setAction(changeFontToVerdanaAction); //setting font change to Verdana action to corresponding menu item 
-
-        Action changeFontSizeTo8 = new StyledEditorKit.FontSizeAction("", 8);
-        changeFontSizeTo8.putValue(Action.NAME, "8");
-        changeFontSize8.setAction(changeFontSizeTo8); //setting font size change to 8 action to corresponding menu item
-
-        Action changeFontSizeTo9 = new StyledEditorKit.FontSizeAction("", 9);
-        changeFontSizeTo9.putValue(Action.NAME, "9");
-        changeFontSize9.setAction(changeFontSizeTo9); //setting font size change to 9 action to corresponding menu item
-
-        Action changeFontSizeTo10 = new StyledEditorKit.FontSizeAction("", 10);
-        changeFontSizeTo10.putValue(Action.NAME, "10");
-        changeFontSize10.setAction(changeFontSizeTo10); //setting font size change to 10 action to corresponding menu item
-
-        Action changeFontSizeTo11 = new StyledEditorKit.FontSizeAction("", 11);
-        changeFontSizeTo11.putValue(Action.NAME, "11");
-        changeFontSize11.setAction(changeFontSizeTo11); //setting font size change to 11 action to corresponding menu item
-
-        Action changeFontSizeTo12 = new StyledEditorKit.FontSizeAction("", 12);
-        changeFontSizeTo12.putValue(Action.NAME, "12");
-        changeFontSize12.setAction(changeFontSizeTo12); //setting font size change to 12 action to corresponding menu item
-
-        Action changeFontSizeTo14 = new StyledEditorKit.FontSizeAction("", 14);
-        changeFontSizeTo14.putValue(Action.NAME, "14");
-        changeFontSize14.setAction(changeFontSizeTo14); //setting font size change to 14 action to corresponding menu item
-
-        Action changeFontSizeTo16 = new StyledEditorKit.FontSizeAction("", 16);
-        changeFontSizeTo16.putValue(Action.NAME, "16");
-        changeFontSize16.setAction(changeFontSizeTo16); //setting font size change to 16 action to corresponding menu item
-
-        Action changeFontSizeTo18 = new StyledEditorKit.FontSizeAction("", 18);
-        changeFontSizeTo18.putValue(Action.NAME, "18");
-        changeFontSize18.setAction(changeFontSizeTo18); //setting font size change to 18 action to corresponding menu item
-
-        Action changeFontSizeTo20 = new StyledEditorKit.FontSizeAction("", 20);
-        changeFontSizeTo20.putValue(Action.NAME, "20");
-        changeFontSize20.setAction(changeFontSizeTo20); //setting font size change to 20 action to corresponding menu item
-
-        Action changeFontSizeTo22 = new StyledEditorKit.FontSizeAction("", 22);
-        changeFontSizeTo22.putValue(Action.NAME, "22");
-        changeFontSize22.setAction(changeFontSizeTo22); //setting font size change to 22 action to corresponding menu item
-
-        Action changeFontSizeTo24 = new StyledEditorKit.FontSizeAction("", 24);
-        changeFontSizeTo24.putValue(Action.NAME, "24");
-        changeFontSize24.setAction(changeFontSizeTo24); //setting font size change to 24 action to corresponding menu item
-
-        Action changeFontSizeTo26 = new StyledEditorKit.FontSizeAction("", 26);
-        changeFontSizeTo26.putValue(Action.NAME, "26");
-        changeFontSize26.setAction(changeFontSizeTo26); //setting font size change to 26 action to corresponding menu item
-
-        Action changeFontSizeTo28 = new StyledEditorKit.FontSizeAction("", 28);
-        changeFontSizeTo28.putValue(Action.NAME, "28");
-        changeFontSize28.setAction(changeFontSizeTo28); //setting font size change to 28 action to corresponding menu item
-
-        Action changeFontSizeTo36 = new StyledEditorKit.FontSizeAction("", 36);
-        changeFontSizeTo36.putValue(Action.NAME, "36");
-        changeFontSize36.setAction(changeFontSizeTo36); //setting font size change to 36 action to corresponding menu item
-
-        Action changeFontSizeTo48 = new StyledEditorKit.FontSizeAction("", 48);
-        changeFontSizeTo48.putValue(Action.NAME, "48");
-        changeFontSize48.setAction(changeFontSizeTo48); //setting font size change to 48 action to corresponding menu item
-
-        Action changeFontSizeTo72 = new StyledEditorKit.FontSizeAction("", 72);
-        changeFontSizeTo72.putValue(Action.NAME, "72");
-        changeFontSize72.setAction(changeFontSizeTo72); //setting font size change to 72 action to corresponding menu item
     }
 
     /**
@@ -201,35 +87,8 @@ public class MainForm extends javax.swing.JFrame {
         saveFile = new javax.swing.JMenuItem();
         openFile = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
-        fontChangeMenu = new javax.swing.JMenu();
-        changeFontArial = new javax.swing.JMenuItem();
-        changeFontBradley = new javax.swing.JMenuItem();
-        changeFontCalibri = new javax.swing.JMenuItem();
-        changeFontChiller = new javax.swing.JMenuItem();
-        changeFontComicSans = new javax.swing.JMenuItem();
-        changeFontCourierNew = new javax.swing.JMenuItem();
-        changeFontOldEnglishText = new javax.swing.JMenuItem();
-        changeFontPalaceScript = new javax.swing.JMenuItem();
-        changeFontRavie = new javax.swing.JMenuItem();
-        changeFontTimes = new javax.swing.JMenuItem();
-        changeFontVerdana = new javax.swing.JMenuItem();
-        changeFontSizeMenu = new javax.swing.JMenu();
-        changeFontSize8 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize9 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize10 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize11 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize12 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize14 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize16 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize18 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize20 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize22 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize24 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize26 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize28 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize36 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize48 = new javax.swing.JCheckBoxMenuItem();
-        changeFontSize72 = new javax.swing.JCheckBoxMenuItem();
+        fontChangeMenu = new FontTypeMenu().getMenu();
+        changeFontSizeMenu = new FontSizeMenu().getMenu();
         cutOption = new javax.swing.JMenuItem();
         copyOption = new javax.swing.JMenuItem();
         pasteOption = new javax.swing.JMenuItem();
@@ -280,65 +139,7 @@ public class MainForm extends javax.swing.JFrame {
 
         editMenu.setText("Edit");
 
-        fontChangeMenu.setText("Change Font");
-
-        addFontTypeToMenu(changeFontArial, "Arial", fontChangeMenu);
-
-        addFontTypeToMenu(changeFontBradley, "Bradley Hand ITC", fontChangeMenu);
-
-        addFontTypeToMenu(changeFontCalibri, "Calibri", fontChangeMenu);
-
-        addFontTypeToMenu(changeFontChiller, "Chiller", fontChangeMenu);
-
-        addFontTypeToMenu(changeFontComicSans, "Comic Sans MS", fontChangeMenu);
-
-        addFontTypeToMenu(changeFontCourierNew, "Courier New", fontChangeMenu);
-
-        addFontTypeToMenu(changeFontOldEnglishText, "Old English Text MT", fontChangeMenu);
-
-        addFontTypeToMenu(changeFontPalaceScript, "Palace Script MT", fontChangeMenu);
-
-        addFontTypeToMenu(changeFontRavie, "Ravie", fontChangeMenu);
-
-        addFontTypeToMenu(changeFontTimes, "Times New Roman", fontChangeMenu);
-
-        addFontTypeToMenu(changeFontVerdana, "Verdana", fontChangeMenu);
-
         editMenu.add(fontChangeMenu);
-
-        changeFontSizeMenu.setText("Change Font Size");
-
-        addMenuItemToMenu(changeFontSize8, "8", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize9, "9", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize10, "10", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize11, "11", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize12, "12", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize14, "14", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize16, "16", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize18, "18", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize20, "20", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize22, "22", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize24, "24", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize26, "26", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize28, "28", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize36, "36", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize48, "48", changeFontSizeMenu);
-
-        addMenuItemToMenu(changeFontSize72, "72", changeFontSizeMenu);
 
         editMenu.add(changeFontSizeMenu);
 
@@ -517,39 +318,12 @@ public class MainForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane TheTextArea;
     private javax.swing.JMenuItem bold;
-    private javax.swing.JMenuItem changeFontArial;
-    private javax.swing.JMenuItem changeFontBradley;
-    private javax.swing.JMenuItem changeFontCalibri;
-    private javax.swing.JMenuItem changeFontChiller;
-    private javax.swing.JMenuItem changeFontComicSans;
-    private javax.swing.JMenuItem changeFontCourierNew;
-    private javax.swing.JMenuItem changeFontOldEnglishText;
-    private javax.swing.JMenuItem changeFontPalaceScript;
-    private javax.swing.JMenuItem changeFontRavie;
-    private javax.swing.JCheckBoxMenuItem changeFontSize10;
-    private javax.swing.JCheckBoxMenuItem changeFontSize11;
-    private javax.swing.JCheckBoxMenuItem changeFontSize12;
-    private javax.swing.JCheckBoxMenuItem changeFontSize14;
-    private javax.swing.JCheckBoxMenuItem changeFontSize16;
-    private javax.swing.JCheckBoxMenuItem changeFontSize18;
-    private javax.swing.JCheckBoxMenuItem changeFontSize20;
-    private javax.swing.JCheckBoxMenuItem changeFontSize22;
-    private javax.swing.JCheckBoxMenuItem changeFontSize24;
-    private javax.swing.JCheckBoxMenuItem changeFontSize26;
-    private javax.swing.JCheckBoxMenuItem changeFontSize28;
-    private javax.swing.JCheckBoxMenuItem changeFontSize36;
-    private javax.swing.JCheckBoxMenuItem changeFontSize48;
-    private javax.swing.JCheckBoxMenuItem changeFontSize72;
-    private javax.swing.JCheckBoxMenuItem changeFontSize8;
-    private javax.swing.JCheckBoxMenuItem changeFontSize9;
-    private javax.swing.JMenu changeFontSizeMenu;
-    private javax.swing.JMenuItem changeFontTimes;
-    private javax.swing.JMenuItem changeFontVerdana;
     private javax.swing.JMenuItem copyOption;
     private javax.swing.JMenuItem cutOption;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenuItem fontChangeColour;
+    private javax.swing.JMenu changeFontSizeMenu;
     private javax.swing.JMenu fontChangeMenu;
     private javax.swing.JMenu formatMenu;
     private javax.swing.JMenuItem italicize;
@@ -566,8 +340,6 @@ public class MainForm extends javax.swing.JFrame {
         menuItem.setText(ItemText);
         menuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                if (menuItem instanceof javax.swing.JCheckBoxMenuItem) uncheckAll();
-                if (menuItem instanceof javax.swing.JCheckBoxMenuItem) menuItem.setSelected(true);
             }
         });
         menu.add(menuItem);
@@ -575,7 +347,7 @@ public class MainForm extends javax.swing.JFrame {
 
     private void addFontTypeToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu){
         menuItem.setFont(new java.awt.Font(ItemText, 0, 11)); // NOI18N
-        menuItem.setText("Times New Roman");
+        menuItem.setText(ItemText);
         menu.add(menuItem);
     }
 
