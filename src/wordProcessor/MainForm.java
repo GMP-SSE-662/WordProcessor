@@ -5,22 +5,6 @@
  */
 package wordProcessor;
 
-import java.awt.Color;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import javax.swing.Action;
-import javax.swing.JColorChooser;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
-import java.io.IOException;
-import java.io.InputStream;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DefaultStyledDocument;
-import javax.swing.text.StyledDocument;
-import javax.swing.text.StyledEditorKit;
 import javax.swing.text.rtf.RTFEditorKit;
 
 /**
@@ -34,28 +18,10 @@ public class MainForm extends javax.swing.JFrame {
     /**
      * Creates new form MainForm
      */
-    JFileChooser fileDialog;
-    File editFile;
-    Color selectedColor;
-    Action changeFontColorAction;
-
     public MainForm() {
         initComponents();
 
         textArea.setEditorKit(rtfKit); //setting editor kit to rtfKit
-        selectedColor = Color.BLACK; //setting default colour in colour chooser to black
-
-        Action boldAction = new StyledEditorKit.BoldAction();
-        boldAction.putValue(Action.NAME, "Bold Text");
-        bold.setAction(boldAction); //setting bold action to the bold menu item 
-
-        Action underlineAction = new StyledEditorKit.UnderlineAction();
-        underlineAction.putValue(Action.NAME, "Underline Text");
-        underline.setAction(underlineAction); //setting underline action to the underline menu item
-
-        Action italicizeAction = new StyledEditorKit.ItalicAction();
-        italicizeAction.putValue(Action.NAME, "Italicize Text");
-        italicize.setAction(italicizeAction); //setting italic action to the italicize menu item 
     }
 
     /**
@@ -76,10 +42,6 @@ public class MainForm extends javax.swing.JFrame {
         fontChangeMenu = new FontTypeMenu().getMenu();
         changeFontSizeMenu = new FontSizeMenu().getMenu();
         formatMenu = new javax.swing.JMenu();
-        bold = new javax.swing.JMenuItem();
-        italicize = new javax.swing.JMenuItem();
-        fontChangeColour = new javax.swing.JMenuItem();
-        underline = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 850));
@@ -106,67 +68,22 @@ public class MainForm extends javax.swing.JFrame {
 
         topMenuBar.add(editMenu);
 
-        formatMenu.setText("Format");
-
-        addMenuItemToMenu(bold, "Bold Text", formatMenu);
-
-        addMenuItemToMenu(italicize, "Italicize Text", formatMenu);
-
-        addMenuItemToMenu(underline, "Underline Text", formatMenu);
-
-        fontChangeColour.setText("Change Font Colour");
-        fontChangeColour.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fontChangeColour.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fontChangeColourActionPerformed(evt);
-            }
-        });
-        formatMenu.add(fontChangeColour);
-
         topMenuBar.add(formatMenu);
 
         setJMenuBar(topMenuBar);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    private void fontChangeColourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fontChangeColourActionPerformed
-        // TODO add your handling code here:
-        selectedColor = JColorChooser.showDialog(this, "Pick a font color", selectedColor); //show JColorChooser and save colour user 
-        //selects
-        Action changeFontColorAction = new StyledEditorKit.ForegroundAction("Pick a font color", selectedColor);  //set colour of selected
-        //text to user selected
-        //colour
-        changeFontColorAction.putValue(Action.NAME, "Change font colour");
-        changeFontColorAction.actionPerformed(evt); //set this action to be performed when user clicks the font colour change menu item
-    }//GEN-LAST:event_fontChangeColourActionPerformed
-
-    private void underlineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_underlineActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_underlineActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane TheTextArea;
-    private javax.swing.JMenuItem bold;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenu fileMenu;
-    private javax.swing.JMenuItem fontChangeColour;
     private javax.swing.JMenu changeFontSizeMenu;
     private javax.swing.JMenu fontChangeMenu;
     private javax.swing.JMenu formatMenu;
-    private javax.swing.JMenuItem italicize;
     private javax.swing.JPanel panelForPage;
     private javax.swing.JTextPane textArea;
     private javax.swing.JMenuBar topMenuBar;
-    private javax.swing.JMenuItem underline;
     // End of variables declaration//GEN-END:variables
-
-    private void addMenuItemToMenu(javax.swing.JMenuItem menuItem, String ItemText, javax.swing.JMenu menu) {
-        menuItem.setText(ItemText);
-        menuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-            }
-        });
-        menu.add(menuItem);
-    }
 }
